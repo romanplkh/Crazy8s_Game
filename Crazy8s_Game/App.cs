@@ -189,12 +189,11 @@ namespace Crazy8s_Game
 
       public void GetClickedCard( object sender, EventArgs e )
       {
-         //Check if game is not over, to re-render cards
-         //!IS IT OK TO CHECK IF GAME IS PLAYING HERE?
          if ( game.GameIsPlaying )
          {
             lblMessage.ResetText();
             game.AddCardUserClicked();
+
             ShowHandPlayer(panPlayer, game.HandPlayer);
             lblMessage.Text = game.Messages;
          }
